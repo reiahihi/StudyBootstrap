@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function clickNe() {
+//            $('#textNe').text("safd");
+            $('#d1').load('iframe.html');
+        }
+
+        function clickMap()
+        {
+            $('#d2').load('testFuntion.html')
+        }
+    </script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #googleMap {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="Home" onclick="clickNe()">
+<input type="button" value="Maps" onclick="clickMap()">
+<h1 id="textNe"></h1>
+
+<div id="d1">
+
+</div>
+
+<div id="d2">
+
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN6qFzPCIzC_V8MTnbY2WrvKPs7rK0CkY&callback=myMap"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order TCH</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/TCH_IframeStyle.css">
+
+    <script src="assets/js/login-href.js"></script>
+    <link rel="stylesheet" href="assets/css/modal-login.css">
+
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<script>
+    function showHome() {
+        $(frameDefault).show();
+    }
+
+    function showMaps() {
+        $(frameDefault).hide();
+        $(frameMaps).show();
+
+    }
+</script>
+
+<body>
+
+<div class="col-md-8 col-right" id="example1"
+     style="max-height: 100% ;min-height: 100% ;  border-right: 1px solid black;">
+    <iframe id="frameDefault" src="iframe.html" frameborder="0"></iframe>
+    <iframe id="frameMaps" src="FrameMapsOnclick.html" frameborder="0"></iframe>
+</div>
+
+
+<div class="col-md-4 col-left" style="background: aqua ; max-height: 100% ;min-height: 100%">
+    <button id="btnHome" onclick="showHome()"> open home</button>
+    <button id="btnMaps" onclick="showMaps()"> open map</button>
+</div>
+
+</body>
+</html>

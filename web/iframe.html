@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="bg-menu">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Coffee House</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/modal-login.css">
+    <link rel="stylesheet" href="assets/css/TCH_IframeStyle.css">
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <script src="assets/js/login-href.js"></script>
+
+</head>
+
+<body class="clearfix" id="main-right">
+
+<div class="main clarfix">
+    <div class="title">
+        <h3>ĐẶT HÀNG VÀ GIAO TẬN NƠI TẠI</h3>
+        <h2>THE COFFEE HOUSE DELIVERY</h2>
+        <p>Đừng quên
+            <span class="cam" id="login-href">Đăng nhập</span> vào tài khoản
+            <span class="cam">The Coffee House Rewards</span> của bạn để tích điểm và nhận các ưu đãi nhé!</p>
+    </div>
+    <!-- <div class="border-line"></div> -->
+    <div class="content">
+        <div class="content-left">
+            <img class="tch" src="assets/img/tch.jpg" alt="Giao hang tan noi">
+        </div>
+        <div class="content-right">
+            <ul style="list-style-type:none">
+                <li class="first">Các bước đặt món</li>
+                <li>
+                    <span class="icon">1</span> Điền thông tin nhận hàng (tên, số điện thoại, địa chỉ nhận hàng)
+                </li>
+                <li>
+                    <span class="icon">2</span> Chọn món yêu thích
+                </li>
+                <li>
+                    <span class="icon">3</span> Tối đa 30 phút
+                    <span class="cam">(*)</span> bạn sẽ có ngay món uống yêu thích!
+                </li>
+            </ul>
+            <div class="notes cam">(*) Thời gian có thể khác nhau tùy thuộc vào vị trí và giao thông tại thời điểm đặt
+                hàng
+            </div>
+            <div class="notes cam">Thời gian phục vụ : 7h-20h</div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" style="display: none;">
+        <div class="modal-dialog" style="width: 400px ;margin-top: 250px;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:15px 50px; ">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                </div>
+                <div class="modal-body" style="padding:30px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <!--<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>-->
+                            <input type="text" class="form-control" id="usrname" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <!--<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>-->
+                            <input type="text" class="form-control" id="psw" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"
+                                style="background-color: #FF792C ; border: #FF792C">
+                            <span class="glyphicon glyphicon-log-in">&nbsp</span>Login
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Not a member? <a href="#">Sign Up</a> &nbsp - &nbsp Forgot <a href="#">Password?</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

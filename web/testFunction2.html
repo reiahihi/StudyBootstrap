@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .notIE {
+            position: relative;
+            display: inline-block;
+        }
+        select {
+            display: inline-block;
+            height: 30px;
+            width: 150px;
+            outline: none;
+            color: #74646e;
+            border: 1px solid #C8BFC4;
+            border-radius: 4px;
+            box-shadow: inset 1px 1px 2px #ddd8dc;
+            background: #fff;
+        }
+        /* Select arrow styling */
+
+        .notIE .fancyArrow {
+            width: 23px;
+            height: 28px;
+            position: absolute;
+            display: inline-block;
+            top: 1px;
+            right: 3px;
+            background: url(http://www.stackoverflow.com/favicon.ico) right / 90% no-repeat #fff;
+            pointer-events: none;
+        }
+        /*target Internet Explorer 9 and Internet Explorer 10:*/
+
+        @media screen and (min-width: 0\0) {
+            .notIE .fancyArrow {
+                display: none;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+<div id="dd" class="wrapper-dropdown-2">Sign in with
+    <ul class="dropdown">
+        <li><a href="#"><i class="icon-twitter icon-large"></i>Twitter</a></li>
+        <li><a href="#"><i class="icon-github icon-large"></i>Github</a></li>
+        <li><a href="#"><i class="icon-facebook icon-large"></i>Facebook</a></li>
+    </ul>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo iframe</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/TCH_IframeStyle.css">
+
+    <script src="assets/js/login-href.js"></script>
+    <link rel="stylesheet" href="assets/css/modal-login.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+
+    <script>
+        function showHome() {
+            $(frameDefault).show();
+        }
+
+        function showMaps() {
+            $(frameDefault).hide();
+            $(frameMaps).show();
+        }
+
+        function showRecipes() {
+            $(frameDefault).hide();
+            $(frameMaps).hide();
+            $(frameRecipes).show();
+        }
+    </script>
+</head>
+<body>
+
+<div class="col-md-8 col-right"
+     style="max-height: 100% ;min-height: 100% ;  border-right: 1px solid black">
+
+    <iframe id="frameDefault" src="iframe.html" frameborder="0" style="width:100%; height:100%;"></iframe>
+    <iframe id="frameMaps" src="FrameMapsOnclick.html" frameborder="0" style="width:100%; height:100%;"></iframe>
+    <iframe id="frameRecipes" src="dropdownlist.html" frameborder="0"></iframe>
+
+    <div class="modal fade" id="loginModal" role="dialog" tabindex="-1" style="display: none;">
+        <div class="modal-dialog" style="width: 400px ;margin-top: 300px;">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="padding:15px 50px; ">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                </div>
+                <div class="modal-body" style="padding:30px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <!--<label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>-->
+                            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <!--<label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>-->
+                            <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"
+                                style="background-color: #FF792C ; border: #FF792C">
+                            <span class="glyphicon glyphicon-log-in">&nbsp</span>Login
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>Not a member? <a href="#">Sign Up</a> &nbsp - &nbsp Forgot <a href="#">Password?</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--bên trái-->
+<div class="col-md-4 col-left" id="main-left" style="max-height: 100% ;min-height: 100% ">
+
+    <div class="info-component">
+        <img src="assets/img/logo_tch_black.png" class="title">
+        <form action="#" method="post">
+            <div class="name-phone-info-input" data-reactid=".0.1.1.1.0"><label>Thông tin
+                người nhận </label>
+                <div class="form-group" data-reactid=".0.1.1.1.0.1"><input type="text"
+                                                                           class="form-control input-info input-name"
+                                                                           id="name-info" placeholder="Tên"
+                ><input
+                        type="text" class="form-control input-info input-phone" id="phone-info"
+                        placeholder="Số điện thoại">
+                </div>
+
+                <div class="form-group"><input type="email"
+                                               class="form-control input-info input-email"
+                                               id="email-info" placeholder="Email"
+                ></div>
+                <div class="alert alert-danger tch-warning tch-warning-name hidden">Vui lòng
+                    nhập đầy đủ tên và số điện thoại
+                </div>
+                <div class="alert alert-danger tch-warning tch-warning-phone hidden">Vui
+                    lòng nhập đúng số điện thoại
+                </div>
+                <div class="alert alert-danger tch-warning tch-warning-email hidden">Vui
+                    lòng nhập đúng định dạng email
+                </div>
+            </div>
+            <div class="name-phone-info-label">
+                <div></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="delivery-time-component">
+        <div class="delivery-option">
+            <div class="time-not-working"><span>Giao trong ngày </span>
+                <span>18/01/2018</span>
+                <span>, lúc :</span>
+            </div>
+            <div class="form-group form-group-delivery-time week">
+                <select class="form-control"
+                        name="delivery-time">
+                    <option value="7:00">7:00</option>
+
+                    <option value="20:00">20:00</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <span></span>
+
+    <div class="address-component">
+        <div class="address-input">
+            <div class="form-group div-address-pc">
+                <label>Địa điểm giao hàng </label>
+
+                <input type="text" id="numberAddress" placeholder="Địa chỉ"
+                       class="input-address input-info form-control" onclick="showMaps()"/>
+            </div>
+
+
+            <div class="form-group"><input type="text" readonly
+                                           class="form-control input-info input-name"
+                                           id="districtAddress" placeholder="Quận/huyện"
+            ><input
+                    type="text" readonly class="form-control input-info input-phone" id="cityAddress"
+                    placeholder="Tỉnh/thành phố">
+            </div>
+
+
+            <div class="alert alert-danger tch-warning tch-warning-address hidden">Vui lòng
+                nhập địa chỉ để giao hàng
+            </div>
+            <div class="alert alert-danger tch-warning tch-warning-country">Chúng tôi không hỗ
+                trợ quốc gia của bạn
+            </div>
+            <div class="alert alert-danger tch-warning tch-warning-state">Chúng tôi không hỗ
+                trợ tỉnh thành của bạn
+            </div>
+            <div class="alert alert-danger tch-warning tch-warning-district">Chúng tôi không
+                hỗ trợ quận huyện của bạn
+            </div>
+        </div>
+        <div class="address-label">
+            <div></div>
+        </div>
+    </div>
+    <span></span>
+
+    <div class="info-cart" style="display: block;"><i
+            class=" fa-pencil-square icon-edit icon-edit-menu"></i><img src="assets/img/ly.png"
+                                                                        class="glass-icon"
+                                                                        data-reactid=".0.1.4.1"><i
+            class="fa fa-times multi-icon" aria-hidden="true" data-reactid=".0.1.4.2"></i><span
+            class="quantity-info-cart" data-reactid=".0.1.4.3">1</span>
+        <img src="assets/img/pause-symbol.png" class="equal-icon"><span
+                class="total-price-info-cart"><span><span>55.000</span><span>đ</span></span></span></div>
+
+    <!--footer-->
+    <div class="footer-info">
+
+        <div class="btn-div" id="btn-div-menu">
+            <button class="btn btn-submit-info" id="menu-btn" onclick="showRecipes()">CHỌN MÓN</button>
+        </div>
+
+        <div class="footer">
+            <div class="div-hotline" data-toggle="modal" data-target="#loginModal">
+                <div>HOTLINE</div>
+                <div class="hotline">1800 6936</div>
+            </div>
+            <div id="btn-show-logout" class="clearfix footer-profile" data-toggle="modal" data-target="#loginModal">
+                <img src="assets/img/user_avatar.png" class="user-avatar">
+                <span class="name-user">Đăng nhập để tích điểm</span>
+
+                <span class="point-user heartTCH hidden"><span>0</span><span> </span>
+                    <i class="fa fa-heart heartTCH" aria-hidden="true"></i></span></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
